@@ -1,0 +1,227 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+.presente {
+    margin-bottom: 20px;
+
+}
+
+body {
+    background-color: #faf7f2;
+    color: #5a3924;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(250, 247, 242, 0.9);
+    border-bottom: 2px solid #5a3924;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    color: #5a3924;
+}
+
+header nav {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5a3924;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    font-family: 'Playfair Display', serif;
+}
+
+nav ul li a:hover {
+    color: #8c6a50;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background: #5a3924;
+    margin: 5px;
+}
+
+section {
+    padding: 100px 40px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #5a3924;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    background: #5a3924;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 25px;
+}
+
+button:hover {
+    background: #8c6a50;
+    color: #fff;
+}
+
+/* Contador */
+#contador {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5a3924;
+    background: rgba(250, 235, 215, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #5a3924;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Carrossel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 80%;
+    margin: auto;
+}
+
+.carousel img {
+    width: 70%;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    border: 3px solid #5a3924;
+}
+
+.carousel img:hover {
+    transform: scale(1.05);
+}
+
+.carousel button {
+    position: absolute;
+    background: rgba(90, 57, 36, 0.8);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.carousel .prev {
+    left: 5%;
+}
+
+.carousel .next {
+    right: 5%;
+}
+
+/* Lista de Presentes */
+#lista-presentes {
+    display: none;
+    margin-top: 20px;
+}
+
+.presente-item {
+    margin-bottom: 20px; /* Ajuste o valor conforme necessário */
+}
+
+#lista-presentes .presente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #5a3924;
+    border-radius: 15px;
+    background: #faf7f2;
+}
+
+#lista-presentes img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+    background: #5a3924;
+    color: white;
+    padding: 40px;
+    margin-top: 50px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    nav.active ul {
+        display: flex;
+    }
+
+    .carousel img {
+        width: 90%;
+    }
+}
+ 
