@@ -77,11 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
             imagem: "Mesa.jpg"
         },
         { 
-            nome: "Geladeira", 
-            preco: "R$ 2.500,00", 
-            imagem: "Geladeira.jpg"
-        },
-        { 
             nome: "Airfryer", 
             preco: "R$ 700,00", 
             imagem: "Airfryer.webp"
